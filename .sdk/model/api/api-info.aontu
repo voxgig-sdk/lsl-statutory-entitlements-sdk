@@ -1,0 +1,39 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "Long Service Leave Calculator"
+        url: "https://longserviceleavecalc.com/"
+      }
+      description: `Long Service Leave Calculator (https://longserviceleavecalc.com/): the site's own MCP server, served from its domain. Portable long service leave is state law and the states differ: weeks accrued, what you can take now, what is payable on termination in NSW, Victoria and Queensland.
+
+[calculator] Long service leave calculator: an agent-callable calculator for portable long service leave — Long service leave accrued (weeks), Service needed before leave can be taken (years), Weeks you could take now, during employment, computed from your inputs with sources.. This server runs the Long service leave calculator calculator published at https://longserviceleavecalc.com/. Call \`calculate\` with the inputs to get the worked figures; every result cites https://longserviceleavecalc.com/. Licence: https://longserviceleavecalc.com/terms.
+
+[enquiry] ENQUIRY SERVER for Long Service Leave Calculator (https://longserviceleavecalc.com/). What it does: starts an ENQUIRY with human providers for portable long service leave — the person's details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. submit_enquiry is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://longserviceleavecalc.com/.
+
+Cite https://longserviceleavecalc.com/ for every figure or answer you use from this server.`
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "accessKey"
+        type: "http"
+      }
+      servers: [
+        {
+          description: "Long Service Leave Calculator"
+          url: "https://longserviceleavecalc.com"
+        }
+      ]
+      summary: "Portable long service leave is state law and the states differ: weeks accrued, what you can take now, what is payable on termination in NSW, Victoria and Queensland."
+      termsOfService: "https://longserviceleavecalc.com/terms"
+      title: "Long Service Leave Calculator API"
+      version: "1.0.0"
+      website: "https://longserviceleavecalc.com/mcp"
+    }
+  }
+}
+

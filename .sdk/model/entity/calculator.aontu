@@ -1,0 +1,117 @@
+# Entity: calculator
+
+main: kit: entity: calculator: {
+
+  alias: field: {}
+
+  fields: {
+    state: {
+      h: "State"
+      n: "state"
+      r: false
+      sh: "Which state's long service leave law applies?"
+      t: "`$STRING`"
+    }
+    weeklyPay: {
+      h: "Weekly Pay"
+      n: "weeklyPay"
+      r: false
+      sh: "Ordinary weekly pay"
+      t: "`$NUMBER`"
+    }
+    weeksTaken: {
+      h: "Weeks Taken"
+      n: "weeksTaken"
+      r: false
+      sh: "Long service leave already taken"
+      t: "`$NUMBER`"
+    }
+    years: {
+      h: "Years"
+      n: "years"
+      r: false
+      sh: "Continuous service with this employer"
+      t: "`$NUMBER`"
+    }
+  }
+
+  name: "calculator"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "state"
+            "weeklyPay"
+            "weeksTaken"
+            "years"
+          ]
+          co: {
+            id: "POST /mcp/tools/calculate"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/calculate"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "calculate"
+            }
+          ]
+          t: {
+            req: {
+              state: "`reqdata.state`"
+              weeklyPay: "`reqdata.weekly_pay`"
+              weeksTaken: "`reqdata.weeks_taken`"
+              years: "`reqdata.year`"
+            }
+            res: "`body`"
+          }
+        }
+        {
+          bf: false
+          co: {
+            id: "POST /mcp/tools/calculator_describe"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/calculator_describe"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "calculator_describe"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,24 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "> Long Service Leave Calculator (https://longserviceleavecalc.com/): the site&#39;s own MCP server, served from its domain. Portable long service leave is state law and the states differ: weeks accrued, what you can take now, what is payable on termination in NSW, Victoria and Queensland.\n>\n> [calculator] Long service leave calculator: an agent-callable calculator for portable long service leave, Long service leave accrued (weeks), Service needed before leave can be taken (years), Weeks you could take now, during employment, computed from your inputs with sources.. This server runs the Long service leave calculator calculator published at https://longserviceleavecalc.com/. Call `calculate` with the inputs to get the worked figures; every result cites https://longserviceleavecalc.com/. Licence: https://longserviceleavecalc.com/terms.\n>\n> [enquiry] ENQUIRY SERVER for Long Service Leave Calculator (https://longserviceleavecalc.com/). What it does: starts an ENQUIRY with human providers for portable long service leave, the person&#39;s details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. `submit_enquiry` is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://longserviceleavecalc.com/.\n>\n> Cite https://longserviceleavecalc.com/ for every figure or answer you use from this server.",
+      "A JSON-RPC result.",
+      "An access key (`emk_`...): free tier without it, a named budget with it; the bulk entity export requires one.",
+      "Continuous service with this employer",
+      "Long Service Leave Calculator",
+      "Long service leave already taken",
+      "Ordinary weekly pay",
+      "The server card",
+      "The tool&#39;s answer, as JSON",
+      "Which state&#39;s long service leave law applies?",
+      "the confirmation token from step 1, after the person has approved the summary",
+      "the person&#39;s answers, keyed by field key",
+      "true only when the person has agreed to: Send my contact details to up to three payroll and HR service providers, chosen by Long Service Leave Calculator, who&#39;ll contact me directly."
+    ]
+  }
+}

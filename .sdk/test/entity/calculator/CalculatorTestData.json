@@ -1,0 +1,49 @@
+{
+  "existing": {
+    "calculator": {
+      "CALCULATOR00": {
+        "state": "s28",
+        "weeklyPay": 41,
+        "weeksTaken": 42,
+        "years": 43,
+        "id": "CALCULATOR00"
+      },
+      "CALCULATOR01": {
+        "state": "s50",
+        "weeklyPay": 81,
+        "weeksTaken": 82,
+        "years": 83,
+        "id": "CALCULATOR01"
+      },
+      "CALCULATOR02": {
+        "state": "s78",
+        "weeklyPay": 121,
+        "weeksTaken": 122,
+        "years": 123,
+        "id": "CALCULATOR02"
+      }
+    }
+  },
+  "new": {
+    "calculator": {
+      "calculator_ref01": {
+        "state": "sa0",
+        "weeklyPay": 161,
+        "weeksTaken": 162,
+        "years": 163
+      }
+    }
+  },
+  "requests": {
+    "POST /mcp/tools/calculate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /mcp/tools/calculator_describe": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// LslStatutoryEntitlements SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+LslStatutoryEntitlementsUtility::setRegistrar(function (LslStatutoryEntitlementsUtility $u): void {
+    $u->clean = [LslStatutoryEntitlementsClean::class, 'call'];
+    $u->clean_add = [LslStatutoryEntitlementsClean::class, 'add'];
+    $u->clean_explain = [LslStatutoryEntitlementsDone::class, 'clean_explain'];
+    $u->done = [LslStatutoryEntitlementsDone::class, 'call'];
+    $u->make_error = [LslStatutoryEntitlementsMakeError::class, 'call'];
+    $u->feature_add = [LslStatutoryEntitlementsFeatureAdd::class, 'call'];
+    $u->feature_hook = [LslStatutoryEntitlementsFeatureHook::class, 'call'];
+    $u->feature_init = [LslStatutoryEntitlementsFeatureInit::class, 'call'];
+    $u->fetcher = [LslStatutoryEntitlementsFetcher::class, 'call'];
+    $u->make_fetch_def = [LslStatutoryEntitlementsMakeFetchDef::class, 'call'];
+    $u->make_context = [LslStatutoryEntitlementsMakeContext::class, 'call'];
+    $u->make_options = [LslStatutoryEntitlementsMakeOptions::class, 'call'];
+    $u->make_request = [LslStatutoryEntitlementsMakeRequest::class, 'call'];
+    $u->make_response = [LslStatutoryEntitlementsMakeResponse::class, 'call'];
+    $u->make_result = [LslStatutoryEntitlementsMakeResult::class, 'call'];
+    $u->make_point = [LslStatutoryEntitlementsMakePoint::class, 'call'];
+    $u->make_spec = [LslStatutoryEntitlementsMakeSpec::class, 'call'];
+    $u->make_url = [LslStatutoryEntitlementsMakeUrl::class, 'call'];
+    $u->param = [LslStatutoryEntitlementsParam::class, 'call'];
+    $u->prepare_auth = [LslStatutoryEntitlementsPrepareAuth::class, 'call'];
+    $u->prepare_body = [LslStatutoryEntitlementsPrepareBody::class, 'call'];
+    $u->prepare_headers = [LslStatutoryEntitlementsPrepareHeaders::class, 'call'];
+    $u->prepare_method = [LslStatutoryEntitlementsPrepareMethod::class, 'call'];
+    $u->prepare_params = [LslStatutoryEntitlementsPrepareParams::class, 'call'];
+    $u->prepare_path = [LslStatutoryEntitlementsPreparePath::class, 'call'];
+    $u->prepare_query = [LslStatutoryEntitlementsPrepareQuery::class, 'call'];
+    $u->graphql_body = [LslStatutoryEntitlementsGraphql::class, 'body'];
+    $u->graphql_errors = [LslStatutoryEntitlementsGraphql::class, 'errors'];
+    $u->result_basic = [LslStatutoryEntitlementsResultBasic::class, 'call'];
+    $u->result_body = [LslStatutoryEntitlementsResultBody::class, 'call'];
+    $u->result_headers = [LslStatutoryEntitlementsResultHeaders::class, 'call'];
+    $u->transform_request = [LslStatutoryEntitlementsTransformRequest::class, 'call'];
+    $u->transform_response = [LslStatutoryEntitlementsTransformResponse::class, 'call'];
+});
